@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><!-- Clonado por Ads Searcher — origem: https://historiasunicasbrasil.com/kaue/ — 2026-10-17T06:43:43.155Z -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Histórias Únicas - Ajude o Kauê</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="_ext/fonts.googleapis.com/assets/css2" rel="stylesheet">
+  <script src="assets/fb-tracking.js" data-pixel-id="1421857436428378"></script>
+  
+  <script src="_ext/cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async defer></script>
+    
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "y6o1zuzt9y");
+</script>
+
+  <style>
+    :root {
+      --blue:        #4d7bb7;
+      --blue-dark:   #2c425c;
+      --blue-light:  #eef4fc;
+      --gold:        #f3b639;
+      --gold-hover:  #e0a020;
+      --gold-light:  #fef8ea;
+      --white:       #ffffff;
+      --off-white:   #f7f5f0;
+      --text:        #1a2535;
+      --text-muted:  #6b7a90;
+      --border:      #e4e9f0;
+      --success:     #1daa6b;
+      --danger:      #e84040;
+      --radius-sm:   8px;
+      --radius:      14px;
+      --radius-lg:   22px;
+      --shadow-sm:   0 2px 8px rgba(44,66,92,.08);
+      --shadow:      0 6px 24px rgba(44,66,92,.12);
+      --shadow-lg:   0 16px 48px rgba(44,66,92,.18);
+      --footer-h:    80px;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--off-white);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-top: 64px;
+      padding-bottom: calc(var(--footer-h) + 16px);
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    .page-wrap { max-width: 600px; margin: 0 auto; position: relative; }
+
+    /* HEADER */
+    .site-header {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 200; background: var(--white);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .header-inner {
+      max-width: 600px; margin: 0 auto; height: 64px;
+      display: grid; grid-template-columns: 44px 1fr 44px;
+      align-items: center; padding: 0 1rem;
+    }
+    .menu-btn {
+      width: 36px; height: 36px;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      gap: 5px; cursor: pointer;
+    }
+    .menu-btn span {
+      display: block; width: 22px; height: 2px;
+      background: var(--blue-dark); border-radius: 2px;
+      transition: all .3s ease;
+    }
+    .header-logo { display: flex; align-items: center; justify-content: center; }
+    .header-logo-img { height: 40px; width: auto; max-width: 160px; object-fit: contain; display: block; }
+    .share-btn {
+      width: 36px; height: 36px; background: var(--blue-light);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      color: var(--blue); justify-self: end; transition: background .2s;
+    }
+    .share-btn:hover { background: var(--blue); color: var(--white); }
+
+    /* DRAWER */
+    .drawer-overlay {
+      position: fixed; inset: 0; background: rgba(44,66,92,.5);
+      backdrop-filter: blur(4px); z-index: 300;
+      opacity: 0; pointer-events: none; transition: opacity .3s;
+    }
+    .drawer-overlay.open { opacity: 1; pointer-events: all; }
+    .drawer {
+      position: fixed; top: 0; left: 0; width: 280px; height: 100%;
+      background: var(--white); z-index: 301;
+      transform: translateX(-100%);
+      transition: transform .35s cubic-bezier(.4,0,.2,1);
+      display: flex; flex-direction: column; box-shadow: var(--shadow-lg);
+    }
+    .drawer.open { transform: translateX(0); }
+    .drawer-head {
+      padding: 1.2rem 1.4rem; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .drawer-close {
+      width: 32px; height: 32px; background: var(--off-white);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      cursor: pointer; color: var(--text-muted);
+    }
+    .drawer-nav { padding: 1rem 0; flex: 1; }
+    .drawer-nav a {
+      display: flex; align-items: center; gap: 12px;
+      padding: .85rem 1.4rem; font-size: .92rem; font-weight: 500;
+      color: var(--text); transition: background .15s, color .15s;
+      border-left: 3px solid transparent;
+    }
+    .drawer-nav a:hover { background: var(--blue-light); color: var(--blue); border-left-color: var(--blue); }
+    .drawer-nav a svg { color: var(--text-muted); }
+    .drawer-nav a:hover svg { color: var(--blue); }
+    .drawer-divider { height: 1px; background: var(--border); margin: .5rem 1.4rem; }
+    .drawer-footer-trust {
+      padding: 1rem 1.4rem; border-top: 1px solid var(--border);
+      display: flex; align-items: center; gap: 8px;
+      font-size: .75rem; color: var(--text-muted);
+    }
+
+    /* HERO */
+    .hero { background: var(--white); }
+    .photo-gallery {
+      position: relative; width: 100%;
+      overflow: hidden; background: var(--white);
+      line-height: 0;
+    }
+    .gallery-slide { position: relative; width: 100%; line-height: 0; }
+    .gallery-slide img { width: 100%; height: auto; display: block; margin: 0; padding: 0; }
+    .hero-meta { padding: .85rem 1.2rem .4rem; display: flex; align-items: center; gap: 8px; }
+    .category-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--gold-light); color: var(--gold-hover);
+      border: 1px solid rgba(243,182,57,.3);
+      font-size: .72rem; font-weight: 700; padding: 4px 10px;
+      border-radius: 50px; letter-spacing: .03em; text-transform: uppercase;
+    }
+    .location-badge { display: inline-flex; align-items: center; gap: 4px; font-size: .72rem; font-weight: 500; color: var(--text-muted); }
+    .hero-title { padding: .5rem 1.2rem 1rem; }
+    .hero-title h1 {
+      font-family: 'DM Serif Display', serif; font-size: 1.45rem; font-weight: 400;
+      color: var(--blue-dark); line-height: 1.25; letter-spacing: -.01em; text-align: center;
+      
+    }
+
+    /* CAMPAIGN WIDGET */
+    .campaign-widget {
+      margin: .75rem;
+      background: transparent;
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      box-sizing: border-box;
+    }
+
+    .meta-card-slim {
+      background: #ffffff;
+      padding: 16px 18px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 12px;
+    }
+
+    .meta-header-inline {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .meta-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .meta-amount {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--blue-dark);
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .meta-percent {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--blue);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .progress-track-slim {
+      width: 100%;
+      height: 6px;
+      background-color: var(--border);
+      border-radius: 100px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-fill-slim {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--blue-dark), var(--blue), #3b82f6);
+      border-radius: 100px;
+      transition: width 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .progress-fill-slim::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%);
+      animation: blue-shine 2.5s infinite linear;
+    }
+
+    @keyframes blue-shine {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(200%); }
+    }
+
+    .hero-cta-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+
+    @keyframes pulse-gold {
+      0%   { box-shadow: 0 4px 14px rgba(243,182,57,.3), 0 0 0 0 rgba(243,182,57,.4); }
+      65%  { box-shadow: 0 4px 14px rgba(243,182,57,.3), 0 0 0 10px rgba(243,182,57,0); }
+      100% { box-shadow: 0 4px 14px rgba(243,182,57,.3), 0 0 0 0 rgba(243,182,57,0); }
+    }
+
+    .btn-donate {
+      width: 100%;
+      background: var(--gold);
+      color: var(--blue-dark);
+      border: none;
+      border-radius: var(--radius);
+      padding: 0.85rem 1rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      letter-spacing: 0.02em;
+      animation: pulse-gold 2s ease-out infinite;
+      transition: background 0.2s, transform 0.15s;
+      cursor: pointer;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+
+    .btn-donate:hover { background: var(--gold-hover); }
+    .btn-donate:active { transform: scale(0.98); animation: none; }
+
+    .share-row {
+      display: flex;
+      gap: 8px;
+      width: 100%;
+    }
+
+    .btn-share {
+      flex: 1;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 0.65rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+      cursor: pointer;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+
+    .btn-share:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      background: var(--blue-light);
+    }
+
+    /* CONTEÚDO */
+    .content-section {
+      background: var(--white); border-radius: var(--radius-lg);
+      margin: .75rem; padding: 1.4rem 1.2rem; box-shadow: var(--shadow-sm);
+    }
+    .section-label { display: flex; align-items: center; gap: 8px; margin-bottom: 1rem; }
+    .section-label-icon {
+      width: 30px; height: 30px; background: var(--blue-light); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; color: var(--blue); flex-shrink: 0;
+    }
+    .section-label h2 { font-family: 'DM Serif Display', serif; font-size: 1.15rem; font-weight: 400; color: var(--blue-dark); }
+    .story-text p { font-size: .93rem; color: var(--text); line-height: 1.8; margin-bottom: .9rem; }
+    .story-text p:last-child { margin-bottom: 0; }
+    .story-text strong { color: var(--blue-dark); }
+
+    /* URGENCY */
+    .urgency-alert {
+      background: linear-gradient(135deg, #fff8e6, #fef3cd);
+      border: 1px solid rgba(243,182,57,.4); border-left: 3px solid var(--gold);
+      border-radius: var(--radius-sm); padding: .9rem 1rem;
+      display: flex; gap: 10px; align-items: flex-start; margin: .75rem;
+    }
+    .urgency-alert-icon { color: var(--gold); flex-shrink: 0; margin-top: 1px; }
+    .urgency-alert p { font-size: .87rem; line-height: 1.6; color: var(--text); }
+    .urgency-alert strong { color: var(--blue-dark); }
+
+    /* SLIDER DE FOTOS */
+    .foto-slider-wrap { position: relative; overflow: hidden; }
+    .foto-track {
+      display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch; scrollbar-width: none; gap: 10px; padding-bottom: 2px;
+    }
+    .foto-track::-webkit-scrollbar { display: none; }
+    .foto-slide { flex: 0 0 85%; scroll-snap-align: start; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/3; background: var(--border); flex-shrink: 0; }
+    .foto-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .foto-dots { display: flex; justify-content: center; gap: 6px; margin-top: 12px; }
+    .foto-dot { width: 6px; height: 6px; border-radius: 3px; background: var(--border); transition: width .3s, background .3s; flex-shrink: 0; }
+    .foto-dot.active { width: 20px; background: var(--blue); }
+
+    /* IMPACTO */
+    .impact-grid { display: flex; flex-direction: column; gap: 8px; }
+    .impact-item { display: flex; align-items: center; gap: 12px; padding: .85rem 1rem; border-radius: var(--radius-sm); background: var(--off-white); border: 1px solid var(--border); }
+    .impact-item.neg { background: #fff4f4; border-color: #fcd0d0; }
+    .impact-item.pos { background: #f0fbf5; border-color: #b8f0d4; }
+    .impact-icon { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); flex-shrink: 0; }
+    .impact-icon.neg { background: var(--danger); }
+    .impact-icon.pos { background: var(--success); }
+    .impact-text { font-size: .85rem; line-height: 1.45; }
+
+    /* DOADORES */
+    .donors-list { display: flex; flex-direction: column; gap: 0; }
+    .donor-item { display: flex; align-items: center; gap: 11px; padding: .75rem 0; border-bottom: 1px solid var(--border); }
+    .donor-item:last-child { border-bottom: none; }
+    .donor-avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--blue-light); display: flex; align-items: center; justify-content: center; font-size: .78rem; font-weight: 700; color: var(--blue); flex-shrink: 0; }
+    .donor-name { font-size: .87rem; font-weight: 600; color: var(--text); }
+    .donor-amount { margin-left: auto; font-size: .87rem; font-weight: 700; color: var(--blue-dark); }
+    .donor-time { font-size: .7rem; color: var(--text-muted); }
+
+    /* UPDATES */
+    .update-item { padding: .9rem 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; }
+    .update-item:last-child { border-bottom: none; }
+    .update-date { display: flex; flex-direction: column; align-items: center; min-width: 36px; }
+    .update-date-day { font-size: 1.1rem; font-weight: 700; color: var(--blue); line-height: 1; }
+    .update-date-mon { font-size: .62rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; }
+    .update-line { width: 1px; background: var(--border); flex: 1; margin: 4px auto 0; }
+    .update-content h4 { font-size: .87rem; font-weight: 700; color: var(--text); margin-bottom: .25rem; }
+    .update-content p { font-size: .82rem; color: var(--text-muted); line-height: 1.55; }
+
+    /* TRUST */
+    .trust-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .trust-item { background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: .85rem; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; }
+    .trust-item-icon { width: 36px; height: 36px; border-radius: 9px; display: flex; align-items: center; justify-content: center; }
+    .trust-item strong { font-size: .8rem; color: var(--blue-dark); }
+    .trust-item span { font-size: .7rem; color: var(--text-muted); line-height: 1.35; }
+
+    /* ORG CARD */
+    .org-card-full { display: grid; grid-template-columns: 1fr 1px 1fr; align-items: center; background: var(--blue-light); border: 1px solid #c7dbf5; border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; }
+    .org-col { display: flex; align-items: center; gap: 9px; padding: .75rem 1rem; }
+    .org-col-icon { width: 30px; height: 30px; background: var(--blue); border-radius: 7px; display: flex; align-items: center; justify-content: center; color: var(--white); flex-shrink: 0; }
+    .org-col-label { font-size: .62rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: .06em; }
+    .org-col-value { font-size: .75rem; font-weight: 700; color: var(--blue-dark); }
+    .org-sep { background: #c7dbf5; height: 100%; }
+    .org-verified-bar { grid-column: 1 / -1; border-top: 1px solid #c7dbf5; background: var(--white); display: flex; align-items: center; justify-content: center; gap: 6px; padding: .4rem; font-size: .7rem; font-weight: 700; color: var(--blue); }
+    .org-verified-bar svg { color: var(--success); }
+
+    /* FAQ */
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question { width: 100%; text-align: left; padding: .9rem 0; font-size: .9rem; font-weight: 600; color: var(--blue-dark); display: flex; justify-content: space-between; align-items: center; gap: 8px; cursor: pointer; font-family: 'DM Sans', sans-serif; }
+    .faq-answer { display: none; padding-bottom: .9rem; font-size: .87rem; color: var(--text-muted); line-height: 1.65; }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-chevron { flex-shrink: 0; transition: transform .25s; color: var(--text-muted); }
+
+    /* BANNER FINAL */
+    .banner-final-wrap { margin: .75rem 0 0 0; overflow: hidden; }
+    .banner-final-img { width: 100%; height: auto; display: block; }
+
+    /* PIX */
+    .pix-card { background: linear-gradient(135deg, #38a169, #2f855a); border-radius: var(--radius); padding: 1.2rem; color: var(--white); }
+    .pix-card-head { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
+    .pix-logo-circle { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .pix-card-title { font-size: .95rem; font-weight: 700; }
+    .pix-copy-box { background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25); border-radius: 10px; display: flex; overflow: hidden; margin-bottom: .85rem; }
+    .pix-key-text { flex: 1; padding: .75rem 1rem; font-family: monospace; font-size: .9rem; font-weight: 600; color: var(--white); background: transparent; border: none; outline: none; }
+    .pix-copy-btn { background: rgba(0,0,0,.25); color: var(--white); font-size: .78rem; font-weight: 700; padding: 0 1rem; border: none; cursor: pointer; display: flex; align-items: center; gap: 5px; transition: background .2s; font-family: 'DM Sans', sans-serif; white-space: nowrap; }
+    .pix-copy-btn:hover { background: rgba(0,0,0,.4); }
+    .pix-recipient { font-size: .75rem; color: rgba(255,255,255,.65); margin-bottom: .9rem; }
+    .pix-recipient strong { color: rgba(255,255,255,.9); }
+    .pix-steps-list { display: flex; flex-direction: column; gap: 7px; }
+    .pix-step { display: flex; align-items: flex-start; gap: 9px; }
+    .pix-step-num { width: 20px; height: 20px; border-radius: 50%; background: rgba(0,0,0,.25); font-size: .7rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+    .pix-step-text { font-size: .82rem; color: rgba(255,255,255,.8); line-height: 1.5; }
+    .pix-step-text strong { color: var(--white); }
+
+    /* TOAST */
+    .toast { position: fixed; bottom: calc(var(--footer-h) + 16px); left: 50%; transform: translateX(-50%) translateY(20px); z-index: 500; background: var(--white); border-radius: 14px; padding: .8rem 1.2rem; display: flex; align-items: center; gap: 10px; box-shadow: var(--shadow-lg); border-left: 4px solid var(--success); opacity: 0; pointer-events: none; transition: all .35s cubic-bezier(.34,1.56,.64,1); white-space: nowrap; }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .toast svg { color: var(--success); flex-shrink: 0; }
+    .toast-text { font-size: .85rem; font-weight: 600; color: var(--text); }
+
+    /* STICKY FOOTER */
+    .sticky-footer { position: fixed; bottom: 0; left: 0; right: 0; z-index: 190; background: var(--white); border-top: 1px solid var(--border); box-shadow: 0 -4px 20px rgba(44,66,92,.1); transform: translateY(100%); transition: transform .4s cubic-bezier(.4,0,.2,1); }
+    .sticky-footer.visible { transform: translateY(0); }
+    .sticky-footer-inner { max-width: 600px; margin: 0 auto; height: var(--footer-h); padding: 0 1rem; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: .75rem; }
+    .footer-meta { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+    .footer-meta-track { width: 100%; height: 5px; background: var(--border); border-radius: 50px; overflow: hidden; }
+    .footer-meta-fill { height: 100%; border-radius: 50px; background: linear-gradient(90deg, var(--blue-dark), var(--blue)); transition: width 1.5s ease; }
+    .footer-meta-nums { display: flex; align-items: baseline; gap: 6px; }
+    .footer-arrecadado { font-size: .95rem; font-weight: 700; color: var(--blue-dark); }
+    .footer-goal { font-size: .68rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .footer-donate-btn { background: var(--gold); color: var(--blue-dark); border: none; border-radius: var(--radius-sm); padding: .75rem 1.2rem; font-size: .92rem; font-weight: 700; white-space: nowrap; display: flex; align-items: center; gap: 6px; cursor: pointer; font-family: 'DM Sans', sans-serif; animation: pulse-gold 2s ease-out infinite; transition: background .2s; flex-shrink: 0; }
+    .footer-donate-btn:hover { background: var(--gold-hover); }
+    .footer-donate-btn:active { transform: scale(.97); animation: none; }
+
+    /* SITE FOOTER */
+    .site-footer { background: var(--blue-dark); padding: 2rem 1.2rem 1.4rem; margin: 0; border-radius: 0; }
+    .site-footer-logo-img { height: 50px; width: auto; max-width: 180px; object-fit: contain; display: block; margin-bottom: .5rem; }
+    .site-footer-tag { font-size: .72rem; color: rgba(255,255,255,.4); margin-bottom: 1.2rem; }
+    .site-footer-divider { height: 1px; background: rgba(255,255,255,.08); margin-bottom: 1rem; }
+    .site-footer-socials { display: flex; gap: 8px; margin-bottom: 1.2rem; }
+    .social-btn { width: 36px; height: 36px; border-radius: 9px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.6); transition: background .2s, color .2s; cursor: pointer; }
+    .social-btn:hover { background: rgba(255,255,255,.15); color: var(--white); }
+    .site-footer-copy { font-size: .7rem; color: rgba(255,255,255,.25); }
+    .cnpj-badge { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 50px; padding: 3px 10px; font-size: .7rem; color: rgba(255,255,255,.4); margin-bottom: 4px; }
+
+    /* MODAL DE DOAÇÃO */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(44,66,92,.55); backdrop-filter: blur(4px); z-index: 400; display: flex; align-items: flex-end; justify-content: center; opacity: 0; pointer-events: none; transition: opacity .3s; }
+    .modal-overlay.open { opacity: 1; pointer-events: all; }
+    .modal-sheet { background: var(--white); width: 100%; max-width: 600px; border-radius: 24px 24px 0 0; max-height: 94vh; display: flex; flex-direction: column; transform: translateY(100%); transition: transform .4s cubic-bezier(.34,1.2,.64,1); overflow: hidden; }
+    .modal-overlay.open .modal-sheet { transform: translateY(0); }
+    .modal-handle { width: 40px; height: 4px; background: var(--border); border-radius: 2px; margin: 12px auto 0; flex-shrink: 0; }
+    .modal-head { padding: .9rem 1.2rem .6rem; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
+    .modal-head h2 { font-family: 'DM Serif Display', serif; font-size: 1.05rem; font-weight: 400; color: var(--blue-dark); }
+    .modal-close-btn { width: 32px; height: 32px; background: var(--off-white); border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-muted); cursor: pointer; transition: background .2s, color .2s; }
+    .modal-close-btn:hover { background: #fee2e2; color: var(--danger); }
+    .modal-tabs { display: flex; margin: 0 1.2rem .2rem; background: var(--blue-light); border-radius: 10px; padding: 4px; flex-shrink: 0; }
+    .modal-tab { flex: 1; padding: 8px 10px; border-radius: 7px; font-size: .8rem; font-weight: 600; color: var(--text-muted); background: transparent; cursor: pointer; transition: background .25s, color .25s; text-align: center; font-family: 'DM Sans', sans-serif; }
+    .modal-tab.active { background: var(--blue); color: var(--white); box-shadow: 0 2px 8px rgba(77,123,183,.35); }
+    .modal-body { flex: 1; overflow-y: auto; padding: 1rem 1.2rem; scrollbar-width: none; }
+    .modal-body::-webkit-scrollbar { display: none; }
+    .modal-step { display: none; }
+    .modal-step.active { display: block; }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 1.2rem; }
+    .val-btn { border: 1.5px solid var(--border); background: var(--white); color: var(--text); font-size: .9rem; font-weight: 700; padding: 12px 6px; border-radius: 10px; cursor: pointer; position: relative; overflow: hidden; transition: border-color .2s, background .2s, color .2s; font-family: 'DM Sans', sans-serif; }
+    .val-btn:hover { border-color: var(--blue); color: var(--blue); }
+    .val-btn.selected { border-color: var(--blue); background: var(--blue); color: var(--white); box-shadow: 0 4px 12px rgba(77,123,183,.3); }
+    .val-btn.popular::before { content: 'popular'; position: absolute; top: 0; right: 0; background: var(--gold); color: var(--blue-dark); font-size: .5rem; font-weight: 800; padding: 2px 6px; border-radius: 0 9px 0 6px; }
+    .custom-label { font-size: .78rem; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; }
+    .custom-input-wrap { display: flex; align-items: stretch; border: 1.5px solid var(--border); border-radius: 10px; overflow: hidden; transition: border-color .2s; }
+    .custom-input-wrap:focus-within { border-color: var(--blue); }
+    .currency-tag { background: var(--blue-light); color: var(--blue); font-weight: 700; font-size: .92rem; padding: 11px 14px; border-right: 1.5px solid var(--border); }
+    .custom-input-wrap input { flex: 1; border: none; outline: none; padding: 11px 12px; font-size: .98rem; font-weight: 600; color: var(--text); font-family: 'DM Sans', sans-serif; }
+    .amount-chip { display: inline-flex; align-items: center; gap: 8px; background: var(--blue-light); border: 1.5px solid #c7dbf5; border-radius: 50px; padding: 5px 14px; margin-bottom: 1.1rem; }
+    .chip-label { font-size: .68rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: .06em; }
+    .chip-value { font-size: 1rem; font-weight: 800; color: var(--blue-dark); }
+    .form-group { margin-bottom: .9rem; }
+    .form-group label { display: block; font-size: .8rem; font-weight: 600; color: var(--text); margin-bottom: 5px; }
+    .form-input { width: 100%; border: 1.5px solid var(--border); border-radius: 10px; padding: 11px 13px; font-size: .9rem; font-family: 'DM Sans', sans-serif; color: var(--text); outline: none; transition: border-color .2s, box-shadow .2s; }
+    .form-input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(77,123,183,.12); }
+    .form-input::placeholder { color: #c0ccd8; }
+    .anon-row { display: flex; align-items: center; gap: 7px; margin-top: 5px; }
+    .anon-row input { accent-color: var(--blue); width: 15px; height: 15px; cursor: pointer; }
+    .anon-row span { font-size: .77rem; color: var(--text-muted); cursor: pointer; }
+    .turbine-card { background: linear-gradient(135deg, #fffbeb, #fef3c7); border: 1.5px solid #fde68a; border-radius: 10px; padding: 11px 13px; display: flex; align-items: flex-start; gap: 11px; cursor: pointer; margin-top: .75rem; user-select: none; }
+    .turbine-card.checked { border-color: var(--gold); }
+    .turbine-card input { accent-color: var(--gold); width: 16px; height: 16px; margin-top: 2px; flex-shrink: 0; }
+    .turbine-text strong { font-size: .85rem; color: var(--blue-dark); display: flex; align-items: center; gap: 5px; margin-bottom: 3px; }
+    .turbine-text p { font-size: .76rem; color: var(--text-muted); line-height: 1.4; }
+    .step-back { display: inline-flex; align-items: center; gap: 5px; font-size: .8rem; font-weight: 600; color: var(--text-muted); cursor: pointer; margin-bottom: .8rem; background: none; border: none; font-family: 'DM Sans', sans-serif; transition: color .2s; }
+    .step-back:hover { color: var(--blue); }
+    .modal-footer { padding: .75rem 1.2rem 1.4rem; border-top: 1px solid var(--border); flex-shrink: 0; }
+    .modal-safe { display: flex; align-items: center; justify-content: center; gap: 5px; font-size: .72rem; color: var(--text-muted); margin-top: 7px; }
+    .modal-loading { display: none; flex-direction: column; align-items: center; justify-content: center; padding: 3rem; gap: 1rem; text-align: center; }
+    .spinner { width: 44px; height: 44px; border: 3px solid var(--blue-light); border-top-color: var(--blue); border-radius: 50%; animation: spin .7s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @media (max-width: 400px) {
+      .hero-title h1 { font-size: 1.25rem; }
+      .footer-arrecadado { font-size: .82rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="menu-btn" onclick="openDrawer()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="header-logo">
+      <img src="kaue/imagens/logonova.png" alt="Histórias Únicas" class="header-logo-img">
+    </div>
+    <button class="share-btn" onclick="shareStory()" aria-label="Compartilhar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+        <circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" />
+        <path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- DRAWER -->
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-head">
+    <img src="kaue/imagens/logonova.png" alt="Histórias Únicas" style="height:28px;width:auto;object-fit:contain;">
+    <div class="drawer-close" onclick="closeDrawer()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12" /></svg>
+    </div>
+  </div>
+  <nav class="drawer-nav">
+    <a href="#story">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" /></svg>
+      A História
+    </a>
+    <a href="#fotos">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" /></svg>
+      Fotos
+    </a>
+    <a href="#impact">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
+      Impacto da Doação
+    </a>
+    <a href="#donors">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /></svg>
+      Quem Ajudou
+    </a>
+    <a href="#updates">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" /></svg>
+      Atualizações
+    </a>
+    <div class="drawer-divider"></div>
+    <a href="#pix">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M11.917 11.71a2.046 2.046 0 01-1.454-.602l-2.1-2.1a.4.4 0 00-.551 0l-2.108 2.108a2.044 2.044 0 01-1.454.602h-.414l2.66 2.66c.83.83 2.177.83 3.007 0l2.667-2.668h-.253zM4.25 4.282c.55 0 1.066.214 1.454.602l2.108 2.108a.39.39 0 00.552 0l2.1-2.1a2.044 2.044 0 011.453-.602h.253L9.503 1.623a2.127 2.127 0 00-3.007 0l-2.66 2.66h.414zm10.127 2.214l-1.612-1.612a.307.307 0 01-.114.023h-.733c-.379 0-.75.154-1.017.422l-2.1 2.1a1.005 1.005 0 01-1.425 0L5.268 5.32a1.448 1.448 0 00-1.018-.422h-.9a.306.306 0 01-.109-.021L1.623 6.496c-.83.83-.83 2.177 0 3.008l1.618 1.618a.305.305 0 01.108-.022h.901c.38 0 .75-.153 1.018-.421L7.375 8.57a1.034 1.034 0 011.426 0l2.1 2.1c.267.268.638.421 1.017.421h.733c.04 0 .079.01.114.024l1.612-1.612c.83-.83.83-2.178 0-3.008z" /></svg>
+      Pix Direto
+    </a>
+    <a href="#faq">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01" /></svg>
+      Perguntas Frequentes
+    </a>
+  </nav>
+  <div class="drawer-footer-trust">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="var(--success)"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" /></svg>
+    Plataforma verificada e segura
+  </div>
+</div>
+
+<!-- PÁGINA -->
+<div class="page-wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-title">
+      <h1>A doença tirou de Kauê até a força para tossir. <em>Sua mãe agora luta para não vê-lo voltar ao hospital.</em></h1>
+    </div>
+
+    <!-- Banner principal -->
+    <div class="photo-gallery" id="gallery">
+      <div class="gallery-slide active">
+<kks-player embed="vid_e1b3c2dc6fad15dcabf643d5" style="display:block;margin:0 auto;width:100%"></kks-player>
+<script src="_ext/kksapps.com.br/videos/public/embed.js"></script>
+      </div>
+    </div>
+
+    <!-- Categoria + Localização -->
+    <div class="hero-meta">
+      <span class="category-badge">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" /></svg>
+        Saúde &amp; Família
+      </span>
+      <span class="location-badge">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" /></svg>
+        São Paulo, SP
+      </span>
+    </div>
+  </section>
+
+  <!-- CAMPAIGN WIDGET -->
+  <div class="campaign-widget" id="metaAnchor">
+    <div class="meta-card-slim">
+      <div class="meta-header-inline">
+        <div>
+          <span class="meta-label">Meta de Arrecadação</span>
+          <div class="meta-amount">R$ 200.000</div>
+        </div>
+        <div class="meta-percent" id="metaPct">0%</div>
+      </div>
+
+      <div class="progress-track-slim">
+        <div class="progress-fill-slim" id="progressFill"></div>
+      </div>
+    </div>
+
+    <div class="hero-cta-wrap">
+      <button class="btn-donate" onclick="openModal()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+        </svg>
+        QUERO AJUDAR AGORA
+      </button>
+      
+      <div class="share-row">
+        <button class="btn-share" onclick="shareStory()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="18" cy="5" r="3" />
+            <circle cx="6" cy="12" r="3" />
+            <circle cx="18" cy="19" r="3" />
+            <path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" />
+          </svg>
+          Compartilhar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="urgency-alert">
+    <svg class="urgency-alert-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z" /></svg>
+    <p>
+      <strong>Urgente:</strong> O KAUÊ NÃO PODE ESPERAR. Precisamos arrecadar R$ 200.000 antes que o aparelho de respiração alugado tenha que ser devolvido.
+    </p>
+  </div>
+
+  <!-- A HISTÓRIA -->
+  <section class="content-section" id="story">
+    <div class="section-label">
+      <div class="section-label-icon">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" /></svg>
+      </div>
+      <h2>A história de Kauê e Priscila</h2>
+    </div>
+    <img src="kaue/imagens/bannerkaue.png" alt="Kauê e Priscila" style="width:100%; height:auto; display:block; border-radius:var(--radius); margin-bottom:1.2rem; object-fit:cover;">
+
+    <div class="story-text">
+      <p>Meu nome é <strong>Priscila</strong>, sou mãe do <strong>Kauê</strong>, de 14 anos. Meu filho tem <strong>Atrofia Muscular Espinhal (AME) tipo 2</strong> e passou 36 dias internado por causa de uma séria pneumonia.</p>
+      
+      <p>A doença enfraqueceu sua musculatura a ponto de Kauê <strong>não conseguir tossir sozinho</strong>. Sem força para eliminar as secreções, elas se acumulam nos pulmões e podem provocar novas pneumonias e complicações respiratórias gravíssimas.</p>
+      
+      <p>Hoje, um equipamento chamado <strong>Cough Assist</strong> ajuda o Kauê a eliminar essas secreções. Mas existe um problema desesperador: <strong>o aparelho é alugado e precisa ser devolvido em breve</strong>.</p>
+      
+      <p style="background:#fef8ea;border-left:3px solid var(--gold);padding:.8rem 1rem;border-radius:6px;margin:1rem 0;">
+        <strong style="color:var(--blue-dark);">Depoimento da mãe:</strong> <em>“Eu vou ter que devolver o aparelho que meu filho precisa e não sei o que vou fazer depois. Não temos condições de comprar um. E esperar pode demorar um tempo que o Kauê não tem.”</em>
+      </p>
+
+      <p><strong>Por que ele não pode esperar?</strong></p>
+      <p>Sem esse aparelho, as secreções voltam a se acumular rapidamente e podem levá-lo de volta à UTI hospitalar. Precisamos arrecadar <strong>R$ 200.000</strong> para comprar o equipamento próprio (que custa cerca de R$ 80 mil) e adaptar a casa para os seus cuidados de saúde diários.</p>
+
+      <p style="background:#fff4f4;border-left:3px solid var(--danger);padding:.8rem 1rem;border-radius:6px;margin-top:1rem;">
+        <strong style="color:var(--danger);">O medo de Priscila:</strong> <em>“Como mãe, meu medo é devolver esse aparelho e ficar sem saber como vou ajudar meu filho se ele não conseguir eliminar as secreções.”</em>
+      </p>
+      
+      <p style="margin-top:1rem;"><strong>Sua doação garante que Kauê continue respirando em segurança ao lado da sua família.</strong></p>
+    </div>
+  </section>
+  
+  <!-- PIX -->
+  <section class="content-section" id="pix">
+    <div class="section-label">
+      <div class="section-label-icon" style="background:#f0fbf5;">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="var(--success)"><path d="M11.917 11.71a2.046 2.046 0 01-1.454-.602l-2.1-2.1a.4.4 0 00-.551 0l-2.108 2.108a2.044 2.044 0 01-1.454.602h-.414l2.66 2.66c.83.83 2.177.83 3.007 0l2.667-2.668h-.253zM4.25 4.282c.55 0 1.066.214 1.454.602l2.108 2.108a.39.39 0 00.552 0l2.1-2.1a2.044 2.044 0 011.453-.602h.253L9.503 1.623a2.127 2.127 0 00-3.007 0l-2.66 2.66h.414zm10.127 2.214l-1.612-1.612a.307.307 0 01-.114.023h-.733c-.379 0-.75.154-1.017.422l-2.1 2.1a1.005 1.005 0 01-1.425 0L5.268 5.32a1.448 1.448 0 00-1.018-.422h-.9a.306.306 0 01-.109-.021L1.623 6.496c-.83.83-.83 2.177 0 3.008l1.618 1.618a.305.305 0 01.108-.022h.901c.38 0 .75-.153 1.018-.421L7.375 8.57a1.034 1.034 0 011.426 0l2.1 2.1c.267.268.638.421 1.017.421h.733c.04 0 .079.01.114.024l1.612-1.612c.83-.83.83-2.178 0-3.008z" /></svg>
+      </div>
+      <h2>Pix Direto</h2>
+    </div>
+    <div class="pix-card">
+      <div class="pix-card-head">
+        <div class="pix-logo-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="20" height="20" viewBox="0 0 16 16"><path d="M11.917 11.71a2.046 2.046 0 01-1.454-.602l-2.1-2.1a.4.4 0 00-.551 0l-2.108 2.108a2.044 2.044 0 01-1.454.602h-.414l2.66 2.66c.83.83 2.177.83 3.007 0l2.667-2.668h-.253zM4.25 4.282c.55 0 1.066.214 1.454.602l2.108 2.108a.39.39 0 00.552 0l2.1-2.1a2.044 2.044 0 011.453-.602h.253L9.503 1.623a2.127 2.127 0 00-3.007 0l-2.66 2.66h.414zm10.127 2.214l-1.612-1.612a.307.307 0 01-.114.023h-.733c-.379 0-.75.154-1.017.422l-2.1 2.1a1.005 1.005 0 01-1.425 0L5.268 5.32a1.448 1.448 0 00-1.018-.422h-.9a.306.306 0 01-.109-.021L1.623 6.496c-.83.83-.83 2.177 0 3.008l1.618 1.618a.305.305 0 01.108-.022h.901c.38 0 .75-.153 1.018-.421L7.375 8.57a1.034 1.034 0 011.426 0l2.1 2.1c.267.268.638.421 1.017.421h.733c.04 0 .079.01.114.024l1.612-1.612c.83-.83.83-2.178 0-3.008z" /></svg>
+        </div>
+        <div>
+          <div class="pix-card-title">Doe via Pix</div>
+        </div>
+      </div>
+      <div class="pix-copy-box">
+        <input class="pix-key-text" id="pixKey" value="ajude@doekaue.com" readonly>
+        <button class="pix-copy-btn" onclick="copyPixKey()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2" /><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" /></svg>
+          Copiar
+        </button>
+      </div>
+      <div class="pix-recipient">Recebedor: <strong>HISTORIAS UNICAS</strong></div>
+      <div class="pix-steps-list">
+        <div class="pix-step"><div class="pix-step-num">1</div><div class="pix-step-text">Copie a chave acima clicando em <strong>Copiar</strong></div></div>
+        <div class="pix-step"><div class="pix-step-num">2</div><div class="pix-step-text">Abra o app do seu banco → <strong>Pix → Pagar → Colar chave</strong></div></div>
+        <div class="pix-step"><div class="pix-step-num">3</div><div class="pix-step-text">Confirme o recebedor e finalize — <strong>simples assim!</strong></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDER DE FOTOS -->
+  <section class="content-section" id="fotos" style="padding: 1.2rem;">
+    <div class="section-label">
+      <div class="section-label-icon" style="background:#fef8ea;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--gold-hover)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" /></svg>
+      </div>
+      <h2>A realidade de Kauê</h2>
+    </div>
+    <div class="foto-slider-wrap">
+      <div class="foto-track" id="fotoTrack">
+        <div class="foto-slide"><img src="kaue/imagens/kaue1.jpeg" alt="Kauê 1"></div>
+        <div class="foto-slide"><img src="kaue/imagens/kaue2.jpeg" alt="Kauê 2"></div>
+        <div class="foto-slide"><img src="kaue/imagens/kaue3.jpeg" alt="Kauê 3"></div>
+        <div class="foto-slide"><img src="kaue/imagens/kaue4.jpeg" alt="Kauê 4"></div>
+        <div class="foto-slide"><img src="kaue/imagens/kaue5.jpeg" alt="Kauê 5"></div>
+      </div>
+      <div class="foto-dots" id="fotoDots">
+        <div class="foto-dot active"></div>
+        <div class="foto-dot"></div>
+        <div class="foto-dot"></div>
+        <div class="foto-dot"></div>
+        <div class="foto-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACTO -->
+  <section class="content-section" id="impact">
+    <div class="section-label">
+      <div class="section-label-icon" style="background:var(--gold-light);">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--gold-hover)" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
+      </div>
+      <h2>Para onde vai sua doação</h2>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-item neg">
+        <div class="impact-icon neg"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M18 6L6 18M6 6l12 12" /></svg></div>
+        <div class="impact-text"><strong>Sem o aparelho</strong>, as secreções se acumulam nos pulmões de Kauê e geram novas infecções respiratórias.</div>
+      </div>
+      <div class="impact-item neg">
+        <div class="impact-icon neg"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M18 6L6 18M6 6l12 12" /></svg></div>
+        <div class="impact-text"><strong>Sem doações</strong>, a devolução do equipamento alugado pode forçar uma nova e perigosa internação de Kauê.</div>
+      </div>
+      <div class="impact-item pos">
+        <div class="impact-icon pos"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5" /></svg></div>
+        <div class="impact-text"><strong>Com você</strong>, compraremos o aparelho Cough Assist definitivo (cerca de R$ 80 mil).</div>
+      </div>
+      <div class="impact-item pos">
+        <div class="impact-icon pos"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5" /></svg></div>
+        <div class="impact-text"><strong>Com você</strong>, a casa da família será adaptada adequadamente para os cuidados de saúde do Kauê.</div>
+      </div>
+      <div class="impact-item pos">
+        <div class="impact-icon pos"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5" /></svg></div>
+        <div class="impact-text"><strong>Com você</strong>, Priscila terá a aliviante certeza de conseguir ajudar o filho a respirar sem medo.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOADORES -->
+  <section class="content-section" id="donors">
+    <div class="section-label">
+      <div class="section-label-icon" style="background:#f0fbf5;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /></svg>
+      </div>
+      <h2>Quem já ajudou</h2>
+    </div>
+    <div class="donors-list">
+      <div class="donor-item"><div class="donor-avatar">A</div><div><div class="donor-name">Anônimo</div><div class="donor-time">há 2 minutos</div></div><div class="donor-amount">R$ 100</div></div>
+      <div class="donor-item"><div class="donor-avatar">CS</div><div><div class="donor-name">Carlos Silva</div><div class="donor-time">há 15 minutos</div></div><div class="donor-amount">R$ 50</div></div>
+      <div class="donor-item"><div class="donor-avatar">PR</div><div><div class="donor-name">Paula Rocha</div><div class="donor-time">há 1 hora</div></div><div class="donor-amount">R$ 250</div></div>
+      <div class="donor-item"><div class="donor-avatar">A</div><div><div class="donor-name">Anônimo</div><div class="donor-time">há 2 horas</div></div><div class="donor-amount">R$ 75</div></div>
+      <div class="donor-item"><div class="donor-avatar">MF</div><div><div class="donor-name">Marcos Ferreira</div><div class="donor-time">há 3 horas</div></div><div class="donor-amount">R$ 500</div></div>
+    </div>
+  </section>
+
+  <!-- ATUALIZAÇÕES -->
+  <section class="content-section" id="updates">
+    <div class="section-label">
+      <div class="section-label-icon">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" /></svg>
+      </div>
+      <h2>Atualizações da campanha</h2>
+    </div>
+    <div>
+      <div class="update-item">
+        <div class="update-date"><span class="update-date-day">28</span><span class="update-date-mon">Jul</span><div class="update-line"></div></div>
+        <div class="update-content"><h4>Campanha ao ar!</h4><p>A história do Kauê e de sua mãe Priscila chegou ao Histórias Únicas. Vamos juntos arrecadar o valor do aparelho vital para o Kauê.</p></div>
+      </div>
+      <div class="update-item">
+        <div class="update-date"><span class="update-date-day">28</span><span class="update-date-mon">Jul</span><div class="update-line"></div></div>
+        <div class="update-content"><h4>A urgência do Cough Assist</h4><p>O prazo de devolução do aparelho alugado está correndo. Kauê precisa do equipamento definitivo o quanto antes para não retornar ao hospital.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSPARÊNCIA -->
+  <section class="content-section">
+    <div class="section-label">
+      <div class="section-label-icon">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" /></svg>
+      </div>
+      <h2>Segurança e Transparência</h2>
+    </div>
+    <div class="org-card-full">
+      <div class="org-col"><div class="org-col-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" /></svg></div><div><div class="org-col-label">Localização</div><div class="org-col-value">São Paulo, SP</div></div></div>
+      <div class="org-sep"></div>
+      <div class="org-col"><div class="org-col-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 1.5L18.5 9H13V3.5z" /></svg></div><div><div class="org-col-label">Campanha</div><div class="org-col-value">#ID-2026-0728</div></div></div>
+      <div class="org-verified-bar"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" /></svg>Campanha Verificada pela Histórias Únicas</div>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-item"><div class="trust-item-icon" style="background:#eef4fc;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0110 0v4" /></svg></div><strong>100% Seguro</strong><span>Doação criptografada e verificada</span></div>
+      <div class="trust-item"><div class="trust-item-icon" style="background:#f0fbf5;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><polyline points="9 11 12 14 22 4" /><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" /></svg></div><strong>Prestação de Contas</strong><span>Relatórios publicados todos os meses</span></div>
+      <div class="trust-item"><div class="trust-item-icon" style="background:var(--gold-light);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold-hover)" stroke-width="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg></div><strong>Repasse Rápido</strong><span>Transferência em até 24h úteis</span></div>
+      <div class="trust-item"><div class="trust-item-icon" style="background:#fee2e2;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--danger)" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" /></svg></div><strong>Suporte Ativo</strong><span>Equipe disponível 7 dias por semana</span></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="content-section" id="faq">
+    <div class="section-label">
+      <div class="section-label-icon">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01" /></svg>
+      </div>
+      <h2>Perguntas Frequentes</h2>
+    </div>
+    <div>
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">A doação é 100% segura?<svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg></button><div class="faq-answer">Sim! Todas as doações são processadas com criptografia e passam pela verificação da plataforma Histórias Únicas antes de serem repassadas ao beneficiário.</div></div>
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Existe valor mínimo para doar?<svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg></button><div class="faq-answer">Não! Qualquer valor é bem-vindo. Até R$ 5 ajuda — se cada pessoa der um pouco, grandes conquistas acontecem juntos.</div></div>
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Como saberei que o dinheiro foi usado corretamente?<svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg></button><div class="faq-answer">A Priscila publicará atualizações com comprovantes de compra do equipamento e adaptação da casa. Você também pode acompanhar em tempo real aqui na página.</div></div>
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Posso cancelar minha doação?<svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg></button><div class="faq-answer">Doações via Pix são instantâneas e não podem ser revertidas automaticamente. Em caso de dúvidas, entre em contato com nossa equipe pelo suporte.</div></div>
+    </div>
+  </section>
+
+  <!-- BANNER FINAL -->
+  <div class="banner-final-wrap">
+    <img src="kaue/imagens/bannerfinal.jpg" alt="Banner Final" class="banner-final-img">
+  </div>
+
+</div><!-- /page-wrap -->
+
+<!-- MODAL DE POLÍTICAS -->
+<div class="policy-overlay" id="policyOverlay" onclick="closePolicyIfOutside(event)">
+  <div class="policy-modal">
+    <div class="policy-modal-header">
+      <h2 class="policy-modal-title" id="policyTitle"></h2>
+      <button class="policy-close-btn" onclick="closePolicy()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <div class="policy-modal-body" id="policyBody"></div>
+    <div class="policy-modal-footer">
+      <button class="policy-close-main-btn" onclick="closePolicy()">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<style>
+/* LINKS DE POLÍTICAS NO FOOTER */
+.footer-policy-links {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; flex-wrap: wrap; margin-bottom: 12px;
+}
+.footer-policy-btn {
+  background: none; border: none; color: rgba(255,255,255,.5);
+  font-size: .72rem; font-family: 'DM Sans', sans-serif;
+  cursor: pointer; padding: 0; transition: color .2s;
+  text-decoration: underline; text-underline-offset: 3px;
+}
+.footer-policy-btn:hover { color: var(--gold); }
+.footer-policy-sep { color: rgba(255,255,255,.25); font-size: .72rem; }
+
+/* MODAL DE POLÍTICAS */
+.policy-overlay {
+  position: fixed; inset: 0; background: rgba(44,66,92,.65);
+  backdrop-filter: blur(4px); display: flex; align-items: center;
+  justify-content: center; z-index: 9999; padding: 1.5rem;
+  opacity: 0; pointer-events: none; transition: opacity .3s ease;
+}
+.policy-overlay.active { opacity: 1; pointer-events: all; }
+.policy-modal {
+  background: var(--white); border-radius: 20px; width: 100%;
+  max-width: 600px; max-height: 85vh; display: flex;
+  flex-direction: column; overflow: hidden;
+  transform: scale(.94) translateY(16px);
+  transition: transform .35s cubic-bezier(.34,1.25,.64,1);
+  box-shadow: var(--shadow-lg);
+}
+.policy-overlay.active .policy-modal { transform: scale(1) translateY(0); }
+.policy-modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.4rem 1.6rem 1rem; border-bottom: 1px solid var(--border); flex-shrink: 0;
+}
+.policy-modal-title {
+  font-family: 'DM Serif Display', serif; font-size: 1.1rem;
+  font-weight: 400; color: var(--blue-dark); margin: 0;
+}
+.policy-close-btn {
+  width: 32px; height: 32px; background: var(--off-white);
+  border: 1px solid var(--border); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: var(--text-muted); transition: background .2s, color .2s; flex-shrink: 0;
+}
+.policy-close-btn:hover { background: #fee2e2; color: var(--danger); border-color: #fcd0d0; }
+.policy-modal-body {
+  flex: 1; overflow-y: auto; padding: 1.4rem 1.6rem;
+  font-size: .88rem; color: var(--text-muted); line-height: 1.75;
+  scrollbar-width: none;
+}
+.policy-modal-body::-webkit-scrollbar { display: none; }
+.policy-modal-body h2 {
+  font-family: 'DM Serif Display', serif; font-size: .95rem;
+  font-weight: 400; color: var(--blue-dark); margin: 1.4rem 0 .4rem;
+}
+.policy-modal-body h2:first-child { margin-top: 0; }
+.policy-modal-body p { margin-bottom: .5rem; }
+.policy-modal-body ul { padding-left: 1.2rem; margin-bottom: .5rem; }
+.policy-modal-body ul li { margin-bottom: 4px; }
+.policy-modal-footer {
+  padding: 1rem 1.6rem 1.4rem; border-top: 1px solid var(--border); flex-shrink: 0;
+}
+.policy-close-main-btn {
+  width: 100%; background: var(--blue-dark); color: var(--white);
+  border: none; border-radius: var(--radius-sm); padding: .85rem;
+  font-size: .92rem; font-weight: 700; cursor: pointer;
+  font-family: 'DM Sans', sans-serif; transition: background .2s;
+}
+.policy-close-main-btn:hover { background: var(--blue); }
+</style>
+
+<script>
+var policyContent = {
+  privacidade: {
+    title: 'Política de Privacidade',
+    body: `
+      <p>A Histórias Únicas Tecnologia Ltda, inscrita no CNPJ sob nº 65.955.263/0001-08, respeita a sua privacidade e está comprometida com a proteção dos dados pessoais de todos os usuários e doadores que acessam este site.</p>
+      <h2>1. Coleta de Informações</h2>
+      <p>Coletamos informações fornecidas voluntariamente pelos usuários, como nome, e-mail, telefone e dados necessários para realização de doações.</p>
+      <h2>2. Uso das Informações</h2>
+      <p>As informações coletadas são utilizadas para:</p>
+      <ul>
+        <li>Processar doações</li>
+        <li>Entrar em contato com o usuário</li>
+        <li>Enviar atualizações sobre projetos e ações sociais</li>
+        <li>Melhorar a experiência no site</li>
+      </ul>
+      <h2>3. Compartilhamento de Dados</h2>
+      <p>Os dados poderão ser compartilhados com plataformas de pagamento seguras apenas para viabilizar as doações. Não vendemos ou compartilhamos dados para fins comerciais.</p>
+      <h2>4. Cookies</h2>
+      <p>Utilizamos cookies para melhorar a navegação, personalizar conteúdo e analisar o tráfego do site.</p>
+      <h2>5. Segurança</h2>
+      <p>Adotamos medidas técnicas e organizacionais para proteger os dados pessoais contra acesso não autorizado, perda ou alteração.</p>
+      <h2>6. Direitos do Usuário</h2>
+      <p>O usuário pode solicitar acesso, correção ou exclusão de seus dados a qualquer momento.</p>
+      <h2>7. Contato</h2>
+      <p>Email: contato@historiasunicas.org</p>
+      <h2>8. Alterações</h2>
+      <p>Esta política pode ser atualizada a qualquer momento, sendo recomendada a revisão periódica.</p>
+    `
+  },
+  termos: {
+    title: 'Termos de Uso',
+    body: `
+      <p>Este site é mantido pela Histórias Únicas Tecnologia Ltda, CNPJ 65.955.263/0001-08.</p>
+      <h2>1. Aceitação</h2>
+      <p>Ao acessar este site, o usuário concorda com os presentes termos de uso.</p>
+      <h2>2. Finalidade</h2>
+      <p>O site tem como objetivo divulgar histórias reais e possibilitar doações para apoio às pessoas beneficiadas.</p>
+      <h2>3. Uso do Site</h2>
+      <p>O usuário compromete-se a utilizar o site de forma ética, sem violar leis ou direitos de terceiros.</p>
+      <h2>4. Doações</h2>
+      <p>As doações realizadas são voluntárias e destinadas ao apoio direto às pessoas e causas apresentadas.</p>
+      <h2>5. Propriedade Intelectual</h2>
+      <p>Todo conteúdo do site é de propriedade da Histórias Únicas, sendo proibida a reprodução sem autorização.</p>
+      <h2>6. Limitação de Responsabilidade</h2>
+      <p>A empresa não se responsabiliza por falhas técnicas, indisponibilidade do site ou problemas externos.</p>
+      <h2>7. Modificações</h2>
+      <p>Os termos podem ser alterados a qualquer momento sem aviso prévio.</p>
+      <h2>8. Contato</h2>
+      <p>Email: contato@historiasunicas.org</p>
+    `
+  },
+  doacao: {
+    title: 'Política de Doação',
+    body: `
+      <p>A Histórias Únicas Tecnologia Ltda, CNPJ 65.955.263/0001-08, destina os recursos recebidos ao cuidado e apoio direto às pessoas beneficiadas pelas campanhas.</p>
+      <h2>1. Natureza das Doações</h2>
+      <p>Todas as doações realizadas são voluntárias e destinadas ao apoio das causas apresentadas em cada campanha.</p>
+      <h2>2. Utilização dos Recursos</h2>
+      <p>Os valores arrecadados são repassados diretamente ao beneficiário da campanha, descontadas apenas as taxas operacionais da plataforma.</p>
+      <h2>3. Reembolsos</h2>
+      <p>As doações não são reembolsáveis, exceto em casos de erro comprovado na transação ou cobrança indevida.</p>
+      <h2>4. Segurança</h2>
+      <p>As doações são processadas por plataformas de pagamento seguras, garantindo a proteção dos dados do doador.</p>
+      <h2>5. Transparência</h2>
+      <p>A Histórias Únicas compromete-se com a transparência na aplicação dos recursos, publicando atualizações regulares em cada campanha.</p>
+      <h2>6. Contato</h2>
+      <p>Email: contato@historiasunicas.org</p>
+    `
+  }
+};
+
+function openPolicy(key) {
+  var data = policyContent[key];
+  document.getElementById('policyTitle').textContent = data.title;
+  document.getElementById('policyBody').innerHTML = data.body;
+  document.getElementById('policyOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closePolicy() {
+  document.getElementById('policyOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+function closePolicyIfOutside(e) {
+  if (e.target === document.getElementById('policyOverlay')) closePolicy();
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closePolicy();
+});
+</script>
+
+<!-- SITE FOOTER -->
+<footer class="site-footer">
+  <img src="kaue/imagens/logofooter1.png" alt="Histórias Únicas" class="site-footer-logo-img">
+  <div class="site-footer-tag">Histórias que transformam vidas</div>
+  <div class="site-footer-socials">
+    <a class="social-btn" href="https://www.instagram.com/historiasunicasbr/" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" /></svg></a>
+    <a class="social-btn" href="https://www.facebook.com/profile.php?id=61571984903399" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg></a>
+    <a class="social-btn" href="https://wa.me/5513955467861" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg></a>
+  </div>
+
+  <div class="footer-policy-links">
+    <button class="footer-policy-btn" onclick="openPolicy('privacidade')">Política de Privacidade</button>
+    <span class="footer-policy-sep">·</span>
+    <button class="footer-policy-btn" onclick="openPolicy('termos')">Termos de Uso</button>
+    <span class="footer-policy-sep">·</span>
+    <button class="footer-policy-btn" onclick="openPolicy('doacao')">Política de Doação</button>
+  </div>
+  <div class="site-footer-divider"></div>
+  <div class="cnpj-badge">
+    <svg width="10" height="10" viewBox="0 0 24 24" fill="rgba(255,255,255,.35)"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" /></svg>
+    CNPJ 65.955.263/0001-08
+  </div>
+  <div class="site-footer-copy">© 2026 Histórias Únicas · Todos os direitos reservados</div>
+</footer>
+
+<!-- STICKY FOOTER -->
+<div class="sticky-footer" id="stickyFooter">
+  <div class="sticky-footer-inner">
+    <div class="footer-meta">
+      <div class="footer-meta-nums">
+        <span class="footer-arrecadado" id="footerPctText">0%</span>
+        <span class="footer-goal">da meta de R$ 200.000</span>
+      </div>
+      <div class="footer-meta-track">
+        <div class="footer-meta-fill" id="footerFill" style="width:0%"></div>
+      </div>
+    </div>
+    <button class="footer-donate-btn" onclick="openModal()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" /></svg>
+      DOAR AGORA
+    </button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+  <span class="toast-text">Chave Pix copiada! Cole no seu banco 💙</span>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="donationModal" onclick="handleModalOverlayClick(event)">
+  <div class="modal-sheet">
+    <div class="modal-handle"></div>
+    <div class="modal-step active" id="step1">
+      <div class="modal-head">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:32px;height:32px;background:var(--blue-light);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--blue)"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" /></svg>
+          </div>
+          <h2>Qual valor deseja doar?</h2>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12" /></svg></button>
+      </div>
+      <div class="modal-tabs" id="modalTabs">
+        <button class="modal-tab active" id="tabUnica" onclick="switchTab('unica')">Doação Única</button>
+      </div>
+      <div class="modal-body">
+        <div class="values-grid">
+          <button class="val-btn" onclick="selectVal(20,this)">R$ 20</button>
+          <button class="val-btn popular" onclick="selectVal(30,this)">R$ 30</button>
+          <button class="val-btn" onclick="selectVal(50,this)">R$ 50</button>
+          <button class="val-btn" onclick="selectVal(100,this)">R$ 100</button>
+          <button class="val-btn" onclick="selectVal(150,this)">R$ 150</button>
+          <button class="val-btn" onclick="selectVal(200,this)">R$ 200</button>
+          <button class="val-btn" onclick="selectVal(250,this)">R$ 250</button>
+          <button class="val-btn" onclick="selectVal(500,this)">R$ 500</button>
+          <button class="val-btn" onclick="selectVal(1000,this)">R$ 1.000</button>
+        </div>
+        <div class="custom-label">Ou o que o seu coração mandar ❤️:</div>
+        <div class="custom-input-wrap">
+          <span class="currency-tag">R$</span>
+          <input type="number" id="customAmt" placeholder="Valor livre" min="1" oninput="clearValBtns()">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-donate" onclick="goStep2()">CONTINUAR <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></button>
+        <div class="modal-safe"><svg width="10" height="10" viewBox="0 0 24 24" fill="var(--success)"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" /></svg>Pagamento 100% seguro e verificado</div>
+      </div>
+    </div>
+    <div class="modal-step" id="step2Unica">
+      <div class="modal-head">
+        <button class="step-back" onclick="goStep1()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>Voltar</button>
+        <h2 style="font-size:.93rem;">Complete seus dados</h2>
+        <button class="modal-close-btn" onclick="closeModal()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12" /></svg></button>
+      </div>
+      <div class="modal-body">
+        <div class="amount-chip"><span class="chip-label">Doando</span><span class="chip-value" id="chipUnica">R$ 0,00</span></div>
+        <div class="form-group">
+          <label>Nome</label>
+          <input type="text" class="form-input" id="nameUnica" placeholder="Seu nome completo">
+          <div class="anon-row"><input type="checkbox" id="anonCheck" onchange="toggleAnon()"><span onclick="document.getElementById('anonCheck').click()">Quero doar anonimamente</span></div>
+        </div>
+        <div class="form-group"><label>WhatsApp (opcional)</label><input type="tel" class="form-input" id="phoneUnica" placeholder="(00) 00000-0000" maxlength="15"></div>
+        <div class="form-group"><label>E-mail (opcional)</label><input type="email" class="form-input" id="emailUnica" placeholder="seu@email.com" autocomplete="email"></div>
+        <div class="turbine-card" id="turbineCard" onclick="toggleTurbine(event)">
+          <input type="checkbox" id="turbineCheck">
+          <div class="turbine-text"><strong><svg width="12" height="12" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" /></svg>Turbinar minha doação</strong><p>Adicionar R$ 4,99 para cobrir taxas e garantir que 100% chegue ao beneficiário.</p></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-donate" onclick="submitDonation()"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M11.917 11.71a2.046 2.046 0 01-1.454-.602l-2.1-2.1a.4.4 0 00-.551 0l-2.108 2.108a2.044 2.044 0 01-1.454.602h-.414l2.66 2.66c.83.83 2.177.83 3.007 0l2.667-2.668h-.253zM4.25 4.282c.55 0 1.066.214 1.454.602l2.108 2.108a.39.39 0 00.552 0l2.1-2.1a2.044 2.044 0 011.453-.602h.253L9.503 1.623a2.127 2.127 0 00-3.007 0l-2.66 2.66h.414zm10.127 2.214l-1.612-1.612a.307.307 0 01-.114.023h-.733c-.379 0-.75.154-1.017.422l-2.1 2.1a1.005 1.005 0 01-1.425 0L5.268 5.32a1.448 1.448 0 00-1.018-.422h-.9a.306.306 0 01-.109-.021L1.623 6.496c-.83.83-.83 2.177 0 3.008l1.618 1.618a.305.305 0 01.108-.022h.901c.38 0 .75-.153 1.018-.421L7.375 8.57a1.034 1.034 0 011.426 0l2.1 2.1c.267.268.638.421 1.017.421h.733c.04 0 .079.01.114.024l1.612-1.612c.83-.83.83-2.178 0-3.008z" /></svg>GERAR PIX AGORA</button>
+        <div class="modal-safe"><svg width="10" height="10" viewBox="0 0 24 24" fill="var(--success)"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" /></svg>Pagamento 100% seguro e verificado</div>
+      </div>
+    </div>
+    <div class="modal-loading" id="modalLoading">
+      <div class="spinner"></div>
+      <h3>Gerando sua contribuição…</h3>
+      <p>Aguarde, estamos preparando<br>o Pix pra você com muito carinho 💙</p>
+    </div>
+  </div>
+</div>
+
+<script>
+
+(function() {
+
+  var _0x5c = [56, 1, 2026, 8, 9]; 
+
+  function _0x3f() {
+    var _0x4d = new Date();
+    var _0x8e = new Date(_0x5c[2], _0x5c[3], _0x5c[4]);
+    var _0x9a = new Date(_0x4d.getFullYear(), _0x4d.getMonth(), _0x4d.getDate());
+    var _0x1b = Math.max(0, Math.floor((_0x9a - _0x8e) / (0x3e8 * 0x3c * 0x3c * 0x18)));
+    var _0x7c = _0x5c[0] + (_0x1b * _0x5c[1]);
+    return _0x7c > 0x62 ? 0x62 : _0x7c; // Trava em 98%
+  }
+
+  var _0x0e = _0x3f();
+
+  function _0x7a() {
+    var _0x11 = document.getElementById('progressFill');
+    var _0x22 = document.getElementById('metaPct');
+    var _0x33 = document.getElementById('footerFill');
+    var _0x44 = document.getElementById('footerPctText');
+
+    if (_0x11) _0x11.style.width = _0x0e + '%';
+    if (_0x33) _0x33.style.width = _0x0e + '%';
+
+    var _0x55 = null;
+    var _0x66 = 0x5dc; // 1500ms de animação
+
+    function _0x88(_0x99) {
+      if (!_0x55) _0x55 = _0x99;
+      var _0xaa = Math.min((_0x99 - _0x55) / _0x66, 1);
+      var _0xbb = 1 - Math.pow(1 - _0xaa, 3);
+      var _0xcc = Math.round(_0xbb * _0x0e) + '%';
+      
+      if (_0x22) _0x22.textContent = _0xcc;
+      if (_0x44) _0x44.textContent = _0xcc;
+
+      if (_0xaa < 1) requestAnimationFrame(_0x88);
+    }
+    requestAnimationFrame(_0x88);
+  }
+
+  /* OBSERVER PARA A META E O STICKY FOOTER */
+  var _0xdd = document.getElementById('metaAnchor');
+  var _0xee = document.getElementById('stickyFooter');
+
+  if (_0xdd) {
+    var _0xff = new IntersectionObserver(function(_0x110) {
+      if (_0x110[0].isIntersecting) {
+        _0x7a();
+        _0xff.disconnect();
+      }
+    }, { threshold: 0.1 });
+    _0xff.observe(_0xdd);
+
+    if (_0xee) {
+      var _0x120 = new IntersectionObserver(function(_0x130) {
+        _0xee.classList.toggle('visible', !_0x130[0].isIntersecting);
+      }, { threshold: 0 });
+      _0x120.observe(_0xdd);
+    }
+  }
+})();
+
+/* FOTO SLIDER DOTS */
+(function() {
+  var track = document.getElementById('fotoTrack');
+  var dots = document.querySelectorAll('.foto-dot');
+  if (!track || !dots.length) return;
+  track.addEventListener('scroll', function() {
+    var idx = Math.round(track.scrollLeft / (track.scrollWidth / dots.length));
+    dots.forEach(function(d, i) { d.classList.toggle('active', i === idx); });
+  }, { passive: true });
+})();
+
+/* DRAWER */
+var drawer = document.getElementById('drawer');
+var drawerOverlay = document.getElementById('drawerOverlay');
+function openDrawer() { drawer.classList.add('open'); drawerOverlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeDrawer() { drawer.classList.remove('open'); drawerOverlay.classList.remove('open'); document.body.style.overflow = ''; }
+if (drawer) {
+  drawer.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeDrawer); });
+}
+
+/* FAQ */
+function toggleFaq(btn) {
+  var item = btn.parentElement;
+  var wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(i) { i.classList.remove('open'); });
+  if (!wasOpen) item.classList.add('open');
+}
+
+/* PIX */
+function copyPixKey() {
+  var val = document.getElementById('pixKey').value;
+  navigator.clipboard.writeText(val).catch(function() {
+    var ta = document.createElement('textarea'); ta.value = val; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+  });
+  showToast();
+}
+function showToast() {
+  var t = document.getElementById('toast'); t.classList.add('show');
+  setTimeout(function() { t.classList.remove('show'); }, 3000);
+}
+
+/* SHARE */
+function shareStory() {
+  if (navigator.share) { navigator.share({ title: document.title, url: window.location.href }); }
+  else { navigator.clipboard.writeText(window.location.href).then(showToast); }
+}
+
+/* MODAL DE DOAÇÃO */
+var selectedAmount = null;
+var donationType = 'unica';
+var modal = document.getElementById('donationModal');
+
+function openModal() { modal.classList.add('open'); document.body.style.overflow = 'hidden'; goStep1(); }
+function closeModal() { modal.classList.remove('open'); document.body.style.overflow = ''; resetModal(); }
+function handleModalOverlayClick(e) { if (e.target === modal) closeModal(); }
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+
+function showStep(id) {
+  document.querySelectorAll('.modal-step').forEach(function(s) { s.classList.remove('active'); });
+  document.getElementById('modalLoading').style.display = 'none';
+  var el = document.getElementById(id); if (el) el.classList.add('active');
+}
+function goStep1() { showStep('step1'); document.getElementById('modalTabs').style.display = 'flex'; }
+function goStep2() {
+  var custom = parseFloat(document.getElementById('customAmt').value) || 0;
+  var amt = selectedAmount || (custom > 0 ? custom : null);
+  if (!amt || amt < 1) { alert('Selecione ou insira um valor para continuar.'); return; }
+  if (amt > 7000) { alert('Valor máximo: R$ 7.000'); return; }
+  selectedAmount = amt;
+  document.getElementById('modalTabs').style.display = 'none';
+  var fmt = 'R$ ' + amt.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+  document.getElementById('chipUnica').textContent = fmt; showStep('step2Unica');
+}
+function selectVal(val, btn) {
+  selectedAmount = val;
+  document.querySelectorAll('.val-btn').forEach(function(b) { b.classList.remove('selected'); });
+  btn.classList.add('selected');
+  document.getElementById('customAmt').value = '';
+}
+function clearValBtns() {
+  selectedAmount = null;
+  document.querySelectorAll('.val-btn').forEach(function(b) { b.classList.remove('selected'); });
+}
+function toggleAnon() {
+  var cb = document.getElementById('anonCheck'); var inp = document.getElementById('nameUnica');
+  inp.value = cb.checked ? 'Anônimo' : ''; inp.disabled = cb.checked;
+}
+function toggleTurbine(e) {
+  var cb = document.getElementById('turbineCheck'); var card = document.getElementById('turbineCard');
+  if (e.target !== cb) cb.checked = !cb.checked;
+  card.classList.toggle('checked', cb.checked);
+}
+function submitDonation() {
+  var nome, tel, email, amt = selectedAmount;
+  if (!amt || amt < 1) { alert('Valor inválido.'); return; }
+  nome = document.getElementById('nameUnica').value.trim();
+  tel = document.getElementById('phoneUnica').value.replace(/\D/g,'');
+  email = document.getElementById('emailUnica').value.trim();
+  if (!nome) { alert('Preencha seu nome ou marque "Anônimo".'); return; }
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    alert('Digite um e-mail válido ou deixe o campo em branco.');
+    return;
+  }
+  if (!tel) tel = '000000000';
+  amt += document.getElementById('turbineCheck').checked ? 4.99 : 0;
+  
+  document.querySelectorAll('.modal-step').forEach(function(s) { s.classList.remove('active'); });
+  document.getElementById('modalLoading').style.display = 'flex';
+  var utmStr = '';
+  new URLSearchParams(window.location.search).forEach(function(v, k) { if (k.startsWith('utm_')) utmStr += '&' + k + '=' + encodeURIComponent(v); });
+  var url = 'gerarpix/index.php?amount=' + amt + '&nome=' + encodeURIComponent(nome) + '&telefone=' + encodeURIComponent(tel) + '&email=' + encodeURIComponent(email) + utmStr;
+  setTimeout(function() { window.location.href = url; }, 600);
+}
+function resetModal() {
+  selectedAmount = null; donationType = 'unica';
+  document.querySelectorAll('.val-btn').forEach(function(b) { b.classList.remove('selected'); });
+  document.getElementById('customAmt').value = '';
+  document.getElementById('nameUnica').value = ''; document.getElementById('nameUnica').disabled = false;
+  document.getElementById('phoneUnica').value = '';
+  document.getElementById('emailUnica').value = '';
+  document.getElementById('anonCheck').checked = false;
+  document.getElementById('turbineCheck').checked = false;
+  document.getElementById('turbineCard').classList.remove('checked');
+}
+
+/* MASKS */
+function phoneMask(el) {
+  if (!el) return;
+  el.addEventListener('input', function() {
+    var v = this.value.replace(/\D/g,'').slice(0,11);
+    if (v.length > 6) v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
+    else if (v.length > 2) v = '(' + v.slice(0,2) + ') ' + v.slice(2);
+    else if (v.length > 0) v = '(' + v;
+    this.value = v;
+  });
+}
+phoneMask(document.getElementById('phoneUnica'));
+</script>
+
+</body>
+</html>
